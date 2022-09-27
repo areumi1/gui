@@ -1,0 +1,13 @@
+
+* 이벤트
+	- MouseEvent
+	- WindowEvent
+	- KeyEvent
+	- FocusEvent
+	- 등
+	
+* ActionEvent : 자주 사용하는 이벤트 를 묶어둠 
+	' 버튼 클릭시
+	' 메뉴 클릭시
+	' 리스트(콤보박스// 누르면 하위 폴더들이 나오는것) 더블클릭시
+	' 텍스트필드 엔터쳤을 때 
