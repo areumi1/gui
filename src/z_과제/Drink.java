@@ -1,7 +1,11 @@
 package z_과제;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import java.awt.Dimension;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -13,27 +17,32 @@ public class Drink extends JPanel{
 	public Drink () {
 		initial();
 		addLayout();
+		eventProc();
+
 
 	}
+	
+
+
 
 	void initial() {
 		
-		bcoke = new JButton("Coca-Cola", new ImageIcon("src\\z_과제\\imgs\\콜라.png"));
+		bcoke = new JButton("Coca-Cola  ₩1,500", new ImageIcon("src\\z_과제\\imgs\\콜라.png"));
 		bcoke.setHorizontalTextPosition(JButton.CENTER);
 		bcoke.setVerticalTextPosition(JButton.BOTTOM);
-		bcokez = new JButton("Coca-Cola Zero" ,new ImageIcon("src\\z_과제\\imgs\\콜라제로.png"));
+		bcokez = new JButton("Coca-Cola Zero  ₩1,500" ,new ImageIcon("src\\z_과제\\imgs\\콜라제로.png"));
 		bcokez.setHorizontalTextPosition(JButton.CENTER);
 		bcokez.setVerticalTextPosition(JButton.BOTTOM);
-		bsprite = new JButton("Sprite",new ImageIcon("src\\z_과제\\imgs\\사이다.png"));
+		bsprite = new JButton("Sprite  ₩1,500",new ImageIcon("src\\z_과제\\imgs\\사이다.png"));
 		bsprite.setHorizontalTextPosition(JButton.CENTER);
 		bsprite.setVerticalTextPosition(JButton.BOTTOM);
-		biceAa = new JButton("IceAmericano",new ImageIcon("src\\z_과제\\imgs\\아아.png"));
+		biceAa = new JButton("IceAmericano  ₩1,500",new ImageIcon("src\\z_과제\\imgs\\아아.png"));
 		biceAa.setHorizontalTextPosition(JButton.CENTER);
 		biceAa.setVerticalTextPosition(JButton.BOTTOM);
-		bVanilla = new JButton("VanillaLatte",new ImageIcon("src\\z_과제\\imgs\\바닐라라떼.png"));
+		bVanilla = new JButton("VanillaLatte  ₩4,200",new ImageIcon("src\\z_과제\\imgs\\바닐라라떼.png"));
 		bVanilla.setHorizontalTextPosition(JButton.CENTER);
 		bVanilla.setVerticalTextPosition(JButton.BOTTOM);
-		bMilk = new JButton("Milk",new ImageIcon("src\\z_과제\\imgs\\우유.png"));
+		bMilk = new JButton("Milk , ₩1,500 ",new ImageIcon("src\\z_과제\\imgs\\우유.png"));
 		bMilk.setHorizontalTextPosition(JButton.CENTER);
 		bMilk.setVerticalTextPosition(JButton.BOTTOM);
 		
@@ -42,28 +51,55 @@ public class Drink extends JPanel{
 		setLayout(new BorderLayout());
 		add(la, BorderLayout.NORTH);
 			JPanel pan = new JPanel();
-			pan.setLayout(new GridLayout(1, 3));
+			pan.setLayout(new GridLayout(2, 3,10,15));
 			pan.add(bcoke);
 			pan.add(bcokez);
 			pan.add(bsprite);
-			pan.add(new JLabel("1200"));
-			pan.add(new JLabel("1300"));
-			pan.add(new JLabel("1400"));
-			
-			JPanel pan2 = new JPanel();
-			pan.setLayout(new GridLayout(1, 3));
-			pan2.add(biceAa);
-			pan2.add(bVanilla);
-			pan2.add(bMilk);
-			pan.add(new JLabel("1200"));
-			pan.add(new JLabel("1300"));
-			pan.add(new JLabel("1400"));
+			pan.add(biceAa);
+			pan.add(bVanilla);
+			pan.add(bMilk);
 		add(pan,BorderLayout.CENTER);
 		
 
 	}
 	
 	void eventProc() {
+        bcoke.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zCoke(); 
+            }
+        });// end of addActionListener
+        
+        bcokez.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zCokez(); 
+            }
+        });// end of addActionListener
+        
+        biceAa.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zIceAa(); 
+            }
+        });// end of addActionListener
+        
+        bsprite.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zSprite(); 
+            }
+        });// end of addActionListener
+       
+        bVanilla.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zVanilla(); 
+            }
+        });// end of addActionListener
+       
+        bMilk.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new zMilk(); 
+            }
+        });// end of addActionListener
+				
 		
 	}
 	
@@ -71,4 +107,8 @@ public class Drink extends JPanel{
 	
 
 }
+
+
+
+
 	

@@ -5,7 +5,9 @@ public class MainTest {
 	
 	JFrame f = new JFrame("Drink");
 	Drink drink;
-	JButton btn;
+	JButton btn;		// 결제 버튼 
+	JTextArea orderhistory; /// 장바구니 클릭시 출력
+	
 	
 	MainTest(){
 		
@@ -15,13 +17,13 @@ public class MainTest {
 	
 	void addLayout() {
 		f.setLayout(new BorderLayout());
-		
+		f.add(btn, BorderLayout.SOUTH);
 		
 		JTabbedPane tab = new JTabbedPane();
 		tab.addTab("Drink", drink);
 		f.add(tab, BorderLayout.CENTER);
 		
-		f.setBounds(100, 100, 600, 800);
+		f.setBounds(100, 100, 800, 600);
 		f.setVisible(true);	
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
