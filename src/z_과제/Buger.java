@@ -18,10 +18,8 @@ import javax.swing.JTextField;
 
 public class Buger extends JPanel{
 	
-	JLabel la; 
-	JButton btn,bul,big,sang,dilux,subi,guoo; //메뉴버튼
+
 	MainTest mt;//메인테스트 출력
-    int arr[];
     JButton []menu = new JButton[6];
     String[] ma = {"불고기버거","빅맥","상하이버거","베이컨디럭스","슈비버거","1955버거"};
     JButton [] price = new JButton[6];
@@ -31,7 +29,6 @@ public class Buger extends JPanel{
 		
 		mt = maintest;
 		
-		int arr[] = new int[6];
 		eventproc();
 		addLayout();
 		

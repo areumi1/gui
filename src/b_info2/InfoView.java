@@ -61,7 +61,7 @@ public class InfoView {
 		west.add(new JLabel("Home", JLabel.CENTER));
 		west.add(tfHome);
 		f.add(west , BorderLayout.WEST);
-		f.add(ta, BorderLayout.CENTER);
+		f.add(new JScrollPane(ta), BorderLayout.CENTER);
 		JPanel south = new JPanel();
 		south.setLayout(new GridLayout(1,6));
 		south.add(bAdd);

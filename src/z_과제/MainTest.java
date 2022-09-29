@@ -7,8 +7,8 @@ public class MainTest {
 	
 	JFrame f = new JFrame("Drink");
 	Drink drink;
-	JButton order, delete ;		// 결제 버튼 
-	JTextArea orderhistory = new JTextArea(40,20); /// 장바구니 클릭시 메뉴 가격 출력
+	JButton order, delete ;		
+	JTextArea orderhistory = new JTextArea(40,20); 
 	JTextField tf = new JTextField();
 	Buger buger;
 	Side side;
@@ -16,7 +16,7 @@ public class MainTest {
 	
 	MainTest(){
 		
-		order = new JButton("결제");		// 결제으로 가기
+		order = new JButton("결제");		// 결제로 가기
 		delete = new JButton("주문취소"); 	// area 에서 글삭제
 		
 		drink = new Drink(this);

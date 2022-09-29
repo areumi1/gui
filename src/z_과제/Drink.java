@@ -8,9 +8,8 @@ import javax.swing.*;
 
 public class Drink extends JPanel{
 	//JFrame f = new JFrame("Drink");
-	JLabel la = new JLabel("맥카페 & 음료");
-	JButton bcoke, bcokez, bsprite, biceAa, bVanilla, bMilk;
-	
+
+
 	JButton []menu = new JButton[6];
 	String[] ma = {"코카콜라","코카콜라 제로","스프라이트","아아","바닐라 라떼","우유"};
 	JButton []price = new JButton[6];
@@ -71,10 +70,10 @@ public class Drink extends JPanel{
 
 	}
 	
-//	void openDialog()
-//	{
-//		new zCoke(parent); 
-//	}
+	void openDialog()
+	{
+		new zCoke(parent); 
+	}
 	void eventProc() {
 		
 		for(int i=0; i<menu.length; i++) { //배열로 선언했기 때문에 반드시 for문
@@ -86,20 +85,22 @@ public class Drink extends JPanel{
 		               parent.tf.setText(String.valueOf(parent.sumPrice));
 					}
 		});
+	        menu[0].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	              openDialog();
+	           } 
+	        });// end of addActionListener
+
 	}
 	}
 
 		
 		
-//        menu[0].addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//               openDialog();
-//           } 
-//        });// end of addActionListener
+
         
-//        bcokez.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                new zCokez(); 
+ //       bcokez.addActionListener(new ActionListener() {
+//           public void actionPerformed(ActionEvent e) {                
+//		new zCokez(); 
 //            }
 //        });// end of addActionListener
 //        

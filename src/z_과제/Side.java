@@ -7,10 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Side extends JPanel{
-	//JFrame f = new JFrame("Drink");
-	JLabel la = new JLabel("맥카페 & 음료");
-	JButton bcoke, bcokez, bsprite, biceAa, bVanilla, bMilk;
-	
+
 	JButton []menu = new JButton[6];
 	String[] ma = {"스낵랩","맥윙","치즈스틱","맥너겟","감자튀김","코울슬로"};
 	JButton []price = new JButton[6];
@@ -38,7 +35,6 @@ public class Side extends JPanel{
 			menu[i] = new JButton(ma[i]);
 			
 		}
-		
 		
 		for (int i =0 ; i < price.length; i++) {
 			price[i] = new JButton(String.valueOf(pr[i]));
