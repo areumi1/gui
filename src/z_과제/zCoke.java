@@ -10,11 +10,13 @@ import javax.swing.*;
 	
 	public class zCoke extends JFrame {
 		JButton coke, jumun, jangB, manu;
-		
-	    zCoke(){
-	    	
+		JLabel jl;
+		MainTest parent;
+	    
+		public zCoke(MainTest t){
+	    	parent=t;
 	       
-	    	setBounds(300,150,350, 350);
+	    	setBounds(700,300,350, 350);
 	        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	        setVisible(true);
 	        initial();
@@ -29,7 +31,7 @@ import javax.swing.*;
 	    	coke = new JButton();
 
 	    	
-			coke = new JButton("Coca-Cola  ₩1,500", new ImageIcon("src\\z_과제\\imgs\\콜라.png"));
+			coke = new JButton("코카콜라  ₩1,500", new ImageIcon("src\\z_과제\\imgs\\콜라.png"));
 			coke.setHorizontalTextPosition(JButton.CENTER);
 			coke.setVerticalTextPosition(JButton.BOTTOM);
 			
@@ -48,6 +50,8 @@ import javax.swing.*;
 	    	
 	    }
 	    
+	    
+	    
 	    void eventProc() {
 	        manu.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
@@ -62,11 +66,18 @@ import javax.swing.*;
 	            }
 	        }); // end of addActionListener
 	        
-	        
-	        
-	        
+	        jangB.addActionListener(new ActionListener() {
+	    
+	            public void actionPerformed(ActionEvent e) {
+
+	            	 dispose();
+	            	 
+	            }
+	        }); // end of addActionListener
 	    }
 	    
 	}
+	
+	
 
 

@@ -6,21 +6,21 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Drink extends JPanel{
+public class Side extends JPanel{
 	//JFrame f = new JFrame("Drink");
 	JLabel la = new JLabel("맥카페 & 음료");
 	JButton bcoke, bcokez, bsprite, biceAa, bVanilla, bMilk;
 	
 	JButton []menu = new JButton[6];
-	String[] ma = {"코카콜라","코카콜라 제로","스프라이트","아아","바닐라 라떼","우유"};
+	String[] ma = {"스낵랩","맥윙","치즈스틱","맥너겟","감자튀김","코울슬로"};
 	JButton []price = new JButton[6];
-	int []pr = {1500,1500,1500,1500,4200,1500};
+	int []pr = {3000,4000,2000,3500,2500,1900};
 
 	
 	MainTest parent;
 	
 	
-	public Drink (MainTest t) {
+	public Side (MainTest t) {
 		parent = t;
 		
 		
@@ -44,12 +44,12 @@ public class Drink extends JPanel{
 			price[i] = new JButton(String.valueOf(pr[i]));
 		}
 		
-		menu[0] = new JButton("코카콜라  ₩1,500", new ImageIcon("src\\z_과제\\imgs\\콜라.png"));
-		menu[1] = new JButton("코카콜라 제로  ₩1,500" ,new ImageIcon("src\\z_과제\\imgs\\콜라제로.png"));
-		menu[2] = new JButton("스프라이트  ₩1,500",new ImageIcon("src\\z_과제\\imgs\\사이다.png"));
-		menu[3] = new JButton("아이스 아메리카노  ₩1,500",new ImageIcon("src\\z_과제\\imgs\\아아.png"));
-		menu[4] = new JButton("바닐라 라떼  ₩4,200",new ImageIcon("src\\z_과제\\imgs\\바닐라라떼.png"));
-		menu[5] = new JButton("우유  ₩1,500 ",new ImageIcon("src\\z_과제\\imgs\\우유.png"));
+		menu[0] = new JButton("스낵랩  ₩3000", new ImageIcon("src//z_과제//imgs//스낵랩.png"));
+		menu[1] = new JButton("맥윙 제로  ₩4000" ,new ImageIcon("src//z_과제//imgs//맥윙.png"));
+		menu[2] = new JButton("치즈스틱  ₩2000",new ImageIcon("src//z_과제//imgs//치즈.png"));
+		menu[3] = new JButton("맥너겟  ₩3500",new ImageIcon("src//z_과제//imgs//맥너겟.png"));
+		menu[4] = new JButton("감자튀김   ₩2500",new ImageIcon("src//z_과제//imgs//감튀.png"));
+		menu[5] = new JButton("코울슬로  ₩1900 ",new ImageIcon("src//z_과제//imgs//코울슬로.png"));
 		for (int i=0; i<menu.length; i++) {
 		menu[i].setHorizontalTextPosition(JButton.CENTER);
 		menu[i].setVerticalTextPosition(JButton.BOTTOM);
@@ -71,10 +71,8 @@ public class Drink extends JPanel{
 
 	}
 	
-//	void openDialog()
-//	{
-//		new zCoke(parent); 
-//	}
+	
+	
 	void eventProc() {
 		
 		for(int i=0; i<menu.length; i++) { //배열로 선언했기 때문에 반드시 for문
@@ -88,13 +86,10 @@ public class Drink extends JPanel{
 		});
 	}
 	}
-
-		
-		
 //        menu[0].addActionListener(new ActionListener() {
 //            public void actionPerformed(ActionEvent e) {
 //               openDialog();
-//           } 
+//            } 
 //        });// end of addActionListener
         
 //        bcokez.addActionListener(new ActionListener() {
@@ -128,14 +123,11 @@ public class Drink extends JPanel{
 //        });// end of addActionListener
 				
 		
-	
-	
-	
-	
-
 }
-
-
-
-
 	
+	
+	
+
+
+
+

@@ -13,7 +13,7 @@ public class Jumun extends JFrame{
 	JButton cash, card, reset;
     Jumun(){
 
-    	setBounds(400,350,350, 150);
+    	setBounds(1300,500,350, 150);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         initial();
@@ -42,6 +42,18 @@ public class Jumun extends JFrame{
             	 dispose();
             }
         }); // end of addActionListener
+        
+        cash.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "직원에게 문의해 주세요");
+			}
+		});
+        
+        card.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "카드를 넣어주세요");
+			}
+		});
     }
 
 }
